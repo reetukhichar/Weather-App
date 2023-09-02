@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&family=Great+Vibes&family=Montserrat:ital,wght@0,300;1,300&family=Piazzolla:ital,wght@0,300;0,400;0,800;1,200&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@300&family=Ubuntu:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    /* background-color: black; */
+}
+.box{
+    height: 470px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a5bbdd;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+.search{
+    position: absolute;
+    top: 10px;
+    
+}
+.search input{
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 18px;
+}
+.weather-icon{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}
+.weather-icon .fa-solid{
+    color: rgb(255, 204, 0);
+    font-size: 40px;
+    animation: fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime{
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1.2);
+    } 
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 11;
+    margin-top: 150px;
+    gap: 10px;
+}
+.location .fa-solid{
+    font-size: 2.5rem;
+    color: white;
+    animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates{
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+.location h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.location .current-time p{
+    z-index: 11;
+}
+.temp-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 11;
+    right: -20%;
+    left: -20%;
+    margin-top: 50px;
+}
+.temprature h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.wave {
+    height: 50rem;
+    width: 50rem;
+    background-color: white;
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    z-index: 1;
+    border-radius: 43%;
+    transform-origin: 50% 48%;
+    animation: drift 3000ms infinite linear;
+    margin-top: -25rem;
+    margin-left: -25rem;
+}
+.wave .three{
+    animation: drift 5000ms infinite linear;
+    opacity: 0.2;
+    z-index: 2 !important;
+}
+.wave .two{
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+.no-data{
+    font-size: 20px;
+}
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
